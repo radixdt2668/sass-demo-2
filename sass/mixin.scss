@@ -1,0 +1,11 @@
+@use 'sass:math';
+@mixin cols{
+    @for $i from 1 through 12{
+        $width: calc($i / 12);
+        
+        .col-#{$i} {
+            width: math.percentage($width);     
+        }
+    }
+
+}
